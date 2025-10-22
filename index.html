@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interview Narrative Builder — Dark Mode</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { color-scheme: dark; }
+    body { background: #0b1220; color: #e6eef8; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    .card { transition: transform .22s ease, box-shadow .22s ease; }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(2,6,23,0.6); }
+    .accent { color: #7dd3fc; font-weight: 600; }
+    .muted { color: #9aa7b2; }
+    .pt-block { background: rgba(255,255,255,0.02); padding: .6rem; border-radius: .5rem; }
+    .small-btn { font-size: .85rem; padding: .45rem .6rem; border-radius: .45rem; }
+    .copy-note { position: fixed; right: 1rem; bottom: 1rem; background: #0f1724; border: 1px solid #22303b; color: #9fd0ff; padding: .6rem .9rem; border-radius: .45rem; display: none; }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="max-w-6xl mx-auto px-6 py-10">
+    <!-- Header / Hero -->
+    <header class="text-center mb-10">
+      <h1 class="text-4xl md:text-5xl font-extrabold accent">Interview Narrative Builder</h1>
+      <p class="mt-2 muted max-w-2xl mx-auto">
+        Turn your real experiences into clear, confident interview answers. Click each card to expand — practice the phrases and STAR stories.
+      </p>
+      <div class="mt-4">
+        <button id="toggleLang" class="small-btn bg-slate-800 border border-slate-700 hover:bg-slate-700">Mostrar Tradução 🇧🇷</button>
+        <button id="copyAll" class="small-btn bg-blue-600 ml-2 hover:bg-blue-500 text-white">Copy all narratives</button>
+      </div>
+    </header>
+
+    <!-- Cards -->
+    <main class="space-y-6">
+
+      <!-- Organization & Multitasking -->
+      <section class="card bg-slate-900 border border-slate-800 rounded-2xl p-6">
+        <div class="flex justify-between items-start">
+          <div>
+            <h2 class="text-2xl font-semibold accent">Organization & Multitasking</h2>
+            <p class="muted mt-1">“I’m highly organised, which allows me to handle multiple projects without missing details.”</p>
+          </div>
+          <div class="flex gap-3">
+            <button class="small-btn bg-slate-800" data-copy="#orgNarrative">Copy narrative</button>
+            <button class="small-btn bg-slate-800" data-toggle="#org">Open</button>
+          </div>
+        </div>
+
+        <div id="org" class="mt-4 hidden">
+          <!-- Original narrative block -->
+          <div id="orgNarrative" class="pt-block">
+<strong>Candidate original:</strong>
+<p class="mt-2">
+I’m highly organised, which allows me to handle multiple projects without missing details. In my last job, I managed three simultaneous projects and kept them all on track with careful planning and time management.
+</p>
+          </div>
+
+          <!-- Detailed explanation -->
+          <div class="mt-4">
+            <h3 class="font-semibold">Detailed explanation</h3>
+            <p class="muted mt-2">
+              This statement highlights structure, planning, and time-management skills. It’s effective in interviews because employers want candidates who balance multiple priorities without sacrificing quality.
+            </p>
+          </div>
+
+          <!-- Situation (STAR) -->
+          <div class="mt-4">
+            <h3 class="font-semibold">Situation — Example (STAR)</h3>
+            <ol class="list-decimal list-inside mt-2 space-y-2">
+              <li><strong>Situation:</strong> At my previous company we ran three concurrent product campaigns with overlapping deadlines.</li>
+              <li><strong>Task:</strong> I was responsible for ensuring all deliverables shipped on time across teams.</li>
+              <li><strong>Action:</strong> I created a shared project tracker, scheduled weekly checkpoints, prioritized critical paths, and blocked daily planning time to remove blockers.</li>
+              <li><strong>Result:</strong> All three projects launched on schedule; stakeholder satisfaction increased and we avoided costly delays.</li>
+            </ol>
+          </div>
+
+          <!-- Key terms -->
+          <div class="mt-4">
+            <h3 class="font-semibold">Key terms to focus on</h3>
+            <p class="muted mt-2">organised / time management / prioritise / project tracker / checkpoints / critical path / deliverables / stakeholder satisfaction</p>
+          </div>
+
+          <!-- Polished interview narratives -->
+          <div class="mt-4 grid md:grid-cols-2 gap-4">
+            <div>
+              <h4 class="font-semibold">Formal answer</h4>
+              <div class="mt-2 pt-block">
+                <p>
+                  "I'm highly organised, which allows me to manage multiple projects without losing detail. In my previous role I managed three simultaneous projects — I implemented a shared project tracker, scheduled weekly alignment meetings, and protected daily planning time. As a result, all projects were delivered on time and stakeholder feedback improved."
+                </p>
+                <div class="mt-2 text-sm muted">→ Copy and practise this exact phrasing for interviews.</div>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-semibold">Casual answer</h4>
+              <div class="mt-2 pt-block">
+                <p>
+                  "I like to keep everything organised — I used a simple project tracker and short daily planning sessions to keep three projects on track. It helped me spot issues early and keep the team focused."
+                </p>
+                <div class="mt-2 text-sm muted">→ Shorter, conversational version for informal interviews.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Questions -->
+          <div class="mt-4">
+            <h3 class="font-semibold">Interview questions this covers</h3>
+            <ul class="list-disc list-inside mt-2 muted">
+              <li>How do you manage multiple projects?</li>
+              <li>Give an example of when you had competing deadlines.</li>
+              <li>How do you prioritise work under pressure?</li>
+            </ul>
+          </div>
+
+          <div class="mt-4 hidden text-gray-300 lang-pt">
+            <strong>Tradução / Notas (PT-BR):</strong>
+            <p class="mt-2">Diga que você é organizado, descreva processos (ex.: project tracker, checkpoints) e mostre resultados (projetos entregues no prazo).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Struggling & Improvement -->
+      <section class="card bg-slate-900 border border-slate-800 rounded-2xl p-6">
+        <div class="flex justify-between items-start">
+          <div>
+            <h2 class="text-2xl font-semibold accent">Struggling & Improvement</h2>
+            <p class="muted mt-1">“I’ve struggled with staying organized when juggling multiple projects simultaneously. To improve, I’ve adopted tools like task management software...”</p>
+          </div>
+          <div class="flex gap-3">
+            <button class="small-btn bg-slate-800" data-copy="#improveNarrative">Copy narrative</button>
+            <button class="small-btn bg-slate-800" data-toggle="#improve">Open</button>
+          </div>
+        </div>
+
+        <div id="improve" class="mt-4 hidden">
+          <div id="improveNarrative" class="pt-block">
+            <strong>Candidate original:</strong>
+            <p class="mt-2">
+I’ve struggled with staying organized when juggling multiple projects simultaneously. To improve, I’ve adopted tools like task management software and set aside time at the start of each day to plan priorities. For instance, during a recent busy period, I created a detailed project tracker that kept me on schedule and helped deliver everything on time. I’ve found that taking these steps has significantly improved my focus and efficiency.
+            </p>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="font-semibold">Detailed explanation</h3>
+            <p class="muted mt-2">
+              Admitting a challenge and showing a plan to improve is powerful — it demonstrates self-awareness and learning mindset. Hiring managers like to see concrete steps and measurable improvement.
+            </p>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="font-semibold">Situation — Example (STAR)</h3>
+            <ol class="list-decimal list-inside mt-2 space-y-2">
+              <li><strong>Situation:</strong> I was assigned extra projects during a peak quarter and felt my organization slipping.</li>
+              <li><strong>Task:</strong> Improve my ability to track priorities and avoid missed deadlines.</li>
+              <li><strong>Action:</strong> I implemented task-management software, blocked planning time every morning, and created a project tracker with deadlines and owners.</li>
+              <li><strong>Result:</strong> My on-time delivery rate improved and team feedback noted clearer priorities.</li>
+            </ol>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="font-semibold">Key terms</h3>
+            <p class="muted mt-2">task management software / daily planning / project tracker / priorities / focus / efficiency / on-time delivery</p>
+          </div>
+
+          <div class="mt-4 grid md:grid-cols-2 gap-4">
+            <div>
+              <h4 class="font-semibold">Formal answer</h4>
+              <div class="mt-2 pt-block">
+                <p>
+                  "I recognized I struggled when juggling many projects, so I adopted task-management software and set aside planning time each morning. I also created a detailed tracker during a particularly busy period, which increased my on-time delivery rate and improved focus."
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="font-semibold">Casual answer</h4>
+              <div class="mt-2 pt-block">
+                <p>
+                  "When things piled up, I started using a task app and daily planning to set priorities. It made a real difference — I finished everything on time."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="font-semibold">Questions this covers</h3>
+            <ul class="list-disc list-inside mt-2 muted">
+              <li>Tell me about a time you improved your working style.</li>
+              <li>How do you stay organized under pressure?</li>
+              <li>Describe a tool or system you use to manage work.</li>
+            </ul>
+          </div>
+
+          <div class="mt-4 hidden text-gray-300 lang-pt">
+            <strong>Tradução / Notas (PT-BR):</strong>
+            <p class="mt-2">Admita a dificuldade brevemente, descreva ações concretas (ferramenta + rotina) e detalhe o resultado mensurável.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Delegation -->
+      <section class="card bg-slate-900 border border-slate-800 rounded-2xl p-6">
+        <div class="flex justify-between items-start">
+          <div>
+            <h2 class="text-2xl font-semibold accent">Delegation & Trust</h2>
+            <p class="muted mt-1">“I sometimes find it challenging to delegate... I’ve realised that trying to do everything myself can slow down progress…”</p>
+          </div>
+          <div class="flex gap-3">
+            <button class="small-btn bg-slate-800" data-copy="#delegateNarrative">Copy narrative</button>
+            <button class="small-btn bg-slate-800" data-toggle="#delegate">Open</button>
+          </div>
+        </div>
+
+        <div id="delegate" class="mt-4 hidden">
+          <div id="delegateNarrative" class="pt-block">
+            <strong>Candidate original:</strong>
+            <p class="mt-2">
+I sometimes find it challenging to delegate tasks because I want to ensure they are done correctly and meet high standards. However, I’ve realised that trying to do everything myself can slow down progress and limit team growth. To address this, I’ve focused on building trust within my team by clearly communicating expectations, offering guidance, and creating feedback loops. Recently, I delegated a complex project to a colleague, providing support when needed, and they delivered excellent results. It taught me the value of empowering others and leveraging the team’s strengths.
+            </p>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="font-semibold">Detailed explanation</h3>
+            <p class="muted mt-2">
+              Delegation shows leadership maturity — recognising the balance between quality and empowerment. Effective answers show process: how you select tasks to delegate, how you support colleagues, and what outcomes resulted.
+            </p>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="font-semibold">Situation — Example (STAR)</h3>
+            <ol class="list-decimal list-inside mt-2 space-y-2">
+              <li><strong>Situation:</strong> A complex client project required more capacity than I could handle alone.</li>
+              <li><strong>Task:</strong> Deliver the project without sacrificing quality while developing the team.</li>
+              <li><strong>Action:</strong> I selected a capable colleague, clearly defined deliverables and acceptance criteria, scheduled check-ins, and provided coaching as needed.</li>
+              <li><strong>Result:</strong> The colleague delivered excellent results, the client was satisfied, and the team gained confidence for future projects.</li>
+            </ol>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="font-semibold">Key terms</h3>
+            <p class="muted mt-2">delegate / expectations / coaching / feedback loop / empowerment / ownership / acceptance criteria</p>
+          </div>
+
+          <div class="mt-4 grid md:grid-cols-2 gap-4">
+            <div>
+              <h4 class="font-semibold">Formal answer</h4>
+              <div class="mt-2 pt-block">
+                <p>
+                  "Although I initially struggled with delegation due to high standards, I’ve learned to build trust by communicating expectations, providing guidance and creating feedback loops. Recently I delegated a complex project, supported the colleague where necessary, and they delivered excellent results — which reinforced the importance of empowering the team."
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="font-semibold">Casual answer</h4>
+              <div class="mt-2 pt-block">
+                <p>
+                  "I used to do everything myself because I wanted it perfect. Now I choose the right person, explain clearly, and coach them — it works and frees me to focus on bigger priorities."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="font-semibold">Questions this covers</h3>
+            <ul class="list-disc list-inside mt-2 muted">
+              <li>How do you delegate tasks?</li>
+              <li>Tell me about a time you developed someone on your team.</li>
+              <li>How do you ensure quality when you are not doing the work yourself?</li>
+            </ul>
+          </div>
+
+          <div class="mt-4 hidden text-gray-300 lang-pt">
+            <strong>Tradução / Notas (PT-BR):</strong>
+            <p class="mt-2">Explique por que delegar era difícil, detalhe como fez isso (critérios + check-ins) e destaque o resultado positivo.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer-Centric -->
+      <section class="card bg-slate-900 border border-slate-800 rounded-2xl p-6">
+        <div class="flex justify-between items-start">
+          <div>
+            <h2 class="text-2xl font-semibold accent">Customer-Centric Impact</h2>
+            <p class="muted mt-1">“I take a customer-centric approach...we saw a 15% improvement in customer satisfaction within three months.”</p>
+          </div>
+          <div class="flex gap-3">
+            <button class="small-btn bg-slate-800" data-copy="#customerNarrative">Copy narrative</button>
+            <button class="small-btn bg-slate-800" data-toggle="#customer">Open</button>
+          </div>
+        </div>
+
+        <div id="customer" class="mt-4 hidden">
+          <div id="customerNarrative" class="pt-block">
+            <strong>Candidate original:</strong>
+            <p class="mt-2">
+I take a customer-centric approach to my work. In my last position, I proactively gathered customer feedback on our product. By implementing their suggestions, we saw a 15% improvement in customer satisfaction within three months.
+            </p>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="font-semibold">Detailed explanation</h3>
+            <p class="muted mt-2">
+              Showing measurable customer impact is high-value. Use numbers and process: how you collected feedback, what you changed, and what improved.
+            </p>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="font-semibold">Situation — Example (STAR)</h3>
+            <ol class="list-decimal list-inside mt-2 space-y-2">
+              <li><strong>Situation:</strong> Product NPS was stagnating and customers reported usability issues.</li>
+              <li><strong>Task:</strong> Improve product satisfaction and retention.</li>
+              <li><strong>Action:</strong> I led a feedback campaign, prioritized suggested fixes, and coordinated quick UX changes with the product team.</li>
+              <li><strong>Result:</strong> Customer satisfaction rose by 15% in three months and churn decreased.</li>
+            </ol>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="font-semibold">Key terms</h3>
+            <p class="muted mt-2">customer-centric / feedback loop / NPS / UX fixes / prioritize / retention / measurable impact</p>
+          </div>
+
+          <div class="mt-4 grid md:grid-cols-2 gap-4">
+            <div>
+              <h4 class="font-semibold">Formal answer</h4>
+              <div class="mt-2 pt-block">
+                <p>
+                  "I take a customer-centric approach. In my previous role I organized a feedback initiative, prioritized the most impactful suggestions and worked with product to implement them. Within three months we recorded a 15% increase in customer satisfaction."
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="font-semibold">Casual answer</h4>
+              <div class="mt-2 pt-block">
+                <p>
+                  "I talk to customers, we fixed the main UX issues and satisfaction went up by 15% in a few months — real proof the changes worked."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="font-semibold">Questions this covers</h3>
+            <ul class="list-disc list-inside mt-2 muted">
+              <li>How have you used customer feedback to improve a product?</li>
+              <li>Give an example of when you improved customer satisfaction.</li>
+              <li>How do you measure customer impact?</li>
+            </ul>
+          </div>
+
+          <div class="mt-4 hidden text-gray-300 lang-pt">
+            <strong>Tradução / Notas (PT-BR):</strong>
+            <p class="mt-2">Explique o processo (coleta → priorização → implementação) e destaque o ganho mensurável (15%).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Integrity -->
+      <section class="card bg-slate-900 border border-slate-800 rounded-2xl p-6">
+        <div class="flex justify-between items-start">
+          <div>
+            <h2 class="text-2xl font-semibold accent">Integrity & Transparency</h2>
+            <p class="muted mt-1">“Integrity is a core value of mine...I immediately reported an error and worked overtime to correct it.”</p>
+          </div>
+          <div class="flex gap-3">
+            <button class="small-btn bg-slate-800" data-copy="#integrityNarrative">Copy narrative</button>
+            <button class="small-btn bg-slate-800" data-toggle="#integrity">Open</button>
+          </div>
+        </div>
+
+        <div id="integrity" class="mt-4 hidden">
+          <div id="integrityNarrative" class="pt-block">
+            <strong>Candidate original:</strong>
+            <p class="mt-2">
+Integrity is a core value of mine. I always ensure transparency in my work. For example, when I discovered an error in our financial report, I immediately reported it to my manager and worked overtime to correct it, ensuring we met compliance standards.
+            </p>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="font-semibold">Detailed explanation</h3>
+            <p class="muted mt-2">
+              Integrity stories reveal character. Employers want people who will own mistakes and act to protect the company. Use specifics (what you found, who you told, how you fixed it).
+            </p>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="font-semibold">Situation — Example (STAR)</h3>
+            <ol class="list-decimal list-inside mt-2 space-y-2">
+              <li><strong>Situation:</strong> I found a material error in a financial report prior to submission to auditors.</li>
+              <li><strong>Task:</strong> Correct the error and ensure compliance.</li>
+              <li><strong>Action:</strong> I immediately informed my manager, researched the cause, worked extra hours to correct entries and documented the changes.</li>
+              <li><strong>Result:</strong> The corrected report passed compliance checks and preserved the company’s integrity.</li>
+            </ol>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="font-semibold">Key terms</h3>
+            <p class="muted mt-2">integrity / transparency / compliance / documented / ownership / accountability / ethical</p>
+          </div>
+
+          <div class="mt-4 grid md:grid-cols-2 gap-4">
+            <div>
+              <h4 class="font-semibold">Formal answer</h4>
+              <div class="mt-2 pt-block">
+                <p>
+                  "Integrity is central to my work. When I discovered an error in a financial report, I immediately notified my manager, investigated the cause and worked to correct the entries before submission. This ensured compliance and maintained stakeholder trust."
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="font-semibold">Casual answer</h4>
+              <div class="mt-2 pt-block">
+                <p>
+                  "I found a mistake in a report, told my manager straight away and fixed it. It was important to be transparent and make sure everything was correct."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="font-semibold">Questions this covers</h3>
+            <ul class="list-disc list-inside mt-2 muted">
+              <li>Tell me about a time you owned a mistake.</li>
+              <li>How do you ensure your work is accurate?</li>
+              <li>Have you ever had to report a sensitive issue? What did you do?</li>
+            </ul>
+          </div>
+
+          <div class="mt-4 hidden text-gray-300 lang-pt">
+            <strong>Tradução / Notas (PT-BR):</strong>
+            <p class="mt-2">Conte os fatos: o que encontrou, quem avisou, o que fez para corrigir e o resultado (compliance, confiança preservada).</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="mt-12 text-center muted">
+      <p class="muted">Built for Daby — practice these narratives aloud, record yourself, and refine the language for clarity and confidence.</p>
+      <p class="mt-2 text-sm muted">Want these exported as printable PDFs or as lesson cards? Ask and I’ll add it.</p>
+    </footer>
+  </div>
+
+  <div id="copynote" class="copy-note">Copied ✓</div>
+
+  <script>
+    // Simple interactivity: toggle sections, copy, show PT
+    document.querySelectorAll('[data-toggle]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const sel = btn.getAttribute('data-toggle');
+        document.querySelectorAll(sel).forEach(el => el.classList.toggle('hidden'));
+        if (btn.textContent.trim() === 'Open') btn.textContent = 'Close'; else btn.textContent = 'Open';
+      });
+    });
+
+    // copy individual buttons (narrative blocks)
+    document.querySelectorAll('[data-copy]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const selector = btn.getAttribute('data-copy');
+        const node = document.querySelector(selector);
+        if (!node) return;
+        const text = node.innerText;
+        copyToClipboard(text);
+      });
+    });
+
+    // copy all narratives
+    document.getElementById('copyAll').addEventListener('click', () => {
+      let all = '';
+      document.querySelectorAll('section .pt-block').forEach((b, i) => {
+        all += `\n--- Section ${i+1} ---\n` + b.innerText + '\n';
+      });
+      copyToClipboard(all.trim());
+    });
+
+    // toggle language (PT blocks)
+    const toggleLangBtn = document.getElementById('toggleLang');
+    toggleLangBtn.addEventListener('click', () => {
+      document.querySelectorAll('.lang-pt').forEach(el => el.classList.toggle('hidden'));
+      toggleLangBtn.textContent = toggleLangBtn.textContent.includes('Mostrar') ? 'Hide Translation 🇺🇸' : 'Mostrar Tradução 🇧🇷';
+    });
+
+    // clipboard helper + small UI feedback
+    function copyToClipboard(text) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(() => showCopyNote());
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); showCopyNote(); } catch (e) { alert('Copy failed'); }
+        ta.remove();
+      }
+    }
+    function showCopyNote() {
+      const n = document.getElementById('copynote');
+      n.style.display = 'block';
+      setTimeout(() => n.style.display = 'none', 1300);
+    }
+
+    // small UX: open first card by default
+    document.querySelectorAll('[data-toggle]')[0].click();
+  </script>
+</body>
+</html>
